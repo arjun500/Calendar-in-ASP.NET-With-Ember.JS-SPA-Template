@@ -1,0 +1,49 @@
+﻿<div id="nav-wrapper" style="margin-bottom: 20px">
+            <div class="subnav">
+                <div id="nav" class="navbar">
+                    <ul class="nav">
+                        <li>
+                            <a href="#newevtEdit" rel="tooltip" data-toggle="modal" data-placement="bottom" data-original-title="New" id="newRecord"><i class="icon-plus"></i></a>
+                        </li>
+                        <li data-type="dropdownForm" class="dropdown">
+                            <a class="dropdown-toggle tooltip-toggle" rel="tooltip" data-placement="bottom" data-original-title="Templates" href="#" data-toggle="dropdown"><i class="icon-th"></i><strong class="caret"></strong></a>
+                            <div class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
+                                <div id="external-events">
+                                    <div style="background-color: #CFB4E9" class="external-event label label-success">Debts Collection</div>
+                                    <div style="background-color: #B189EE" class="external-event label label-important">Lunch</div>
+                                    <div style="background-color: #876BAF" class="external-event label label-info">Account Clearance</div>
+                                    <div style="background-color: #6C4EA2" class="external-event label label-warning">Account Clearance</div>
+                                </div>
+                                <br />
+                            </div>
+                        </li>
+
+                        <li data-bind="visible:optionsVisible" class="dropdown">
+                            <a class="dropdown-toggle tooltip-toggle" rel="tooltip" data-placement="bottom" data-original-title="Options"
+                                data-toggle="dropdown"
+                                href="#"><i class="icon-align-justify"></i>
+                                <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#"><i class="icon-pencil"></i><span class="icon-space5">Edit</span></a></li>
+                                <li><a href="#"><i class="icon-trash"></i><span class="icon-space5">Remove</span></a></li>
+                            </ul>
+                        </li>
+                        <li><a href="javascript:;" rel="tooltip" data-bind="click:triggerEdited" data-placement="bottom" data-original-title="Generate QR Code"><i class="icon-qrcode"></i></a></li>
+                        <li><a href="javascript:;" rel="tooltip" id="comment-notif" data-bind="click:triggerEdited" data-placement="bottom" data-original-title="Comments"><i class="icon-comment"></i><span class="badge badge-info sectioncounter">6</span></a></li>
+                           <li data-type="dropdownForm" class="dropdown">
+                                    <a class="dropdown-toggle tooltip-toggle"  rel="tooltip" data-placement="bottom" data-original-title="Filter" href="#" data-toggle="dropdown"><i class="icon-search"></i><strong class="caret"></strong></a>
+                                    <div class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
+                                        <form method="post" action="/en/NotImplemented" accept-charset="UTF-8">
+                                           <input style="margin-bottom: 15px;" type="text" placeholder="Event Type" />
+                                             <input data-type="datepicker" style="margin-bottom: 15px;" type="text" placeholder="From" />
+                                               <input data-type="datepicker" style="margin-bottom: 15px;" type="text" placeholder="To" />
+                                            <button id="btnSearchEvent" style="margin-bottom: 5px" class="btn btn-info btn-block"><i class="icon-search icon-white"></i></button>
+                                        </form>
+                                        <br />
+                                    </div>
+                                </li>
+                    </ul>
+                </div>
+            </div>
+        </div>

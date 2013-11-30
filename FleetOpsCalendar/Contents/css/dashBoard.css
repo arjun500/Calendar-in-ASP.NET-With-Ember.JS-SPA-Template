@@ -1,0 +1,446 @@
+﻿@charset "utf-8";
+/*---Reset CSS---*/
+html, body {
+    height: 100%;
+}
+
+
+#wrap {
+    min-height: 100%;
+}
+
+#main {
+    overflow: auto;
+    padding-bottom: 60px;
+}
+
+.footer {
+    position: relative;
+    height: 60px;
+    clear: both;
+    padding: 50px 10px 30px 10px;
+    background-color:#f8f8f8;
+}
+
+    .footer a {
+        color: #555;
+    }
+
+
+/*---Heading---*/
+
+/*---Form Elements---*/
+
+
+
+
+/*---Body Right Content---*/
+.sfMaincontent {
+    padding: 0 15px 15px;
+    overflow: hidden;
+}
+
+.stack-bar-bottom {
+    margin-left: 20%;
+    right: auto;
+    bottom: 0;
+    top: auto;
+    left: auto;
+}
+
+
+.loaderDiv {
+    width: 100%;
+    bottom: 0px;
+    position: absolute;
+    display: none;
+    z-index: 2000;
+}
+
+.controlPanel {
+    background-color: rgba(238, 238, 237, 0.09);
+    width: 100%;
+    height: 60px;
+    border-bottom: 1px solid #CCC;
+}
+
+
+
+.field-validation-error {
+    color: #a70d0d;
+}
+
+
+input.input-validation-error,
+textarea.input-validation-error,
+select.input-validation-error {
+    background: #FEF1EC;
+    border: 1px solid #CD0A0A;
+}
+
+
+
+
+::selection {
+    background: #F094B7;
+    color: #555;
+}
+
+.validator {
+    color: #C01616;
+    font-weight: bold;
+    vertical-align: text-top;
+}
+
+.seperator {
+    font: Bold 12px Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-shadow: 0 1px 1px #fff;
+    color: #777;
+}
+
+
+.scrollup {
+    width: 40px;
+    height: 40px;
+    opacity: 0.3;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    display: none;
+}
+
+.icon-space5 {
+    margin-left: 5px;
+}
+
+
+/*
+Document   : jquery.pnotify.default.css
+Created on : Nov 23, 2009, 3:14:10 PM
+Author     : Hunter Perrin
+Version    : 1.2.0
+Link       : http://pinesframework.org/pnotify/
+Description:
+	Default styling for Pines Notify jQuery plugin.
+*/
+/* -- Notice */
+.ui-pnotify {
+    top: 25px;
+    right: 25px;
+    position: absolute;
+    height: auto;
+    /* Ensures notices are above everything */
+    z-index: 9999;
+}
+/* Hides position: fixed from IE6 */
+html > body .ui-pnotify {
+    position: fixed;
+}
+
+    .ui-pnotify .ui-pnotify-shadow {
+        -webkit-box-shadow: 0px 2px 10px rgba(50, 50, 50, 0.5);
+        -moz-box-shadow: 0px 2px 10px rgba(50, 50, 50, 0.5);
+        box-shadow: 0px 2px 10px rgba(50, 50, 50, 0.5);
+    }
+
+.ui-pnotify-container {
+    background-position: 0 0;
+    padding: .8em;
+    height: 100%;
+    margin: 0;
+}
+
+.ui-pnotify-sharp {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+
+.ui-pnotify-closer, .ui-pnotify-sticker {
+    float: right;
+    margin-left: .2em;
+}
+
+.ui-pnotify-title {
+    display: block;
+    margin-bottom: .4em;
+}
+
+.ui-pnotify-text {
+    display: block;
+}
+
+.ui-pnotify-icon, .ui-pnotify-icon span {
+    display: block;
+    float: left;
+    margin-right: .2em;
+}
+/* -- History Pulldown */
+.ui-pnotify-history-container {
+    position: absolute;
+    top: 0;
+    right: 18px;
+    width: 70px;
+    border-top: none;
+    padding: 0;
+    -webkit-border-top-left-radius: 0;
+    -moz-border-top-left-radius: 0;
+    border-top-left-radius: 0;
+    -webkit-border-top-right-radius: 0;
+    -moz-border-top-right-radius: 0;
+    border-top-right-radius: 0;
+    /* Ensures history container is above notices. */
+    z-index: 10000;
+}
+
+    .ui-pnotify-history-container .ui-pnotify-history-header {
+        padding: 2px;
+    }
+
+    .ui-pnotify-history-container button {
+        cursor: pointer;
+        display: block;
+        width: 100%;
+    }
+
+    .ui-pnotify-history-container .ui-pnotify-history-pulldown {
+        display: block;
+        margin: 0 auto;
+    }
+
+
+#sbaccordion {
+    border: none;
+}
+
+    #sbaccordion #collapseOne .nav li a {
+        font-size: 11px;
+    }
+
+    #sbaccordion .accordion-toggle {
+        text-decoration: none;
+        color: white;
+        text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+        background-color: #1D2474;
+    }
+
+
+
+    #sbaccordion .accordion-inner .nav-list {
+        padding-right: 0;
+    }
+
+.tablerow-tools {
+    -moz-opacity: 0.5;
+    opacity: 0.5;
+}
+
+    .tablerow-tools:hover {
+        -moz-opacity: 1;
+        opacity: 1;
+    }
+
+
+
+
+
+h2 small {
+    font-size: 14px;
+}
+
+.ui-accordion h3 {
+    padding: 5px 5px;
+}
+
+
+/* css for timepicker */
+.ui-timepicker-div .ui-widget-header { margin-bottom: 8px; }
+.ui-timepicker-div dl { text-align: left; }
+.ui-timepicker-div dl dt { height: 25px; margin-bottom: -25px; }
+.ui-timepicker-div dl dd { margin: 0 10px 10px 65px; }
+.ui-timepicker-div td { font-size: 90%; }
+.ui-tpicker-grid-label { background: none; border: none; margin: 0; padding: 0; }
+
+.ui-timepicker-rtl{ direction: rtl; }
+.ui-timepicker-rtl dl { text-align: right; }
+.ui-timepicker-rtl dl dd { margin: 0 65px 10px 10px; }
+
+
+  #nav.affix {
+        position: fixed;
+        left: 0;
+        width: 100%;
+    }
+
+    #nav > .navbar-inner {
+        border-left: 0;
+        border-right: 0;
+        border-radius: 0;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        -o-border-radius: 0;
+    }
+
+    .rightNavFixed {
+        display: block;
+        float: right;
+        right: 33px;
+        position: fixed;
+        top: 67px;
+        z-index: 1000000;
+        height: 98%;
+    }
+
+
+
+    .rightNavsubFixed {
+        z-index: 1000000;
+        height: 100%;
+    }
+
+    .radioitem {
+        min-height: 0px;
+        width: 40px;
+    }
+
+    .external-event {
+        width: 95%;
+        margin-bottom: 5px;
+        cursor: pointer;
+        padding: 5px 5px;
+        font-weight: normal;
+    }
+
+    .select2-container {
+        margin-left: 0;
+    }
+
+    .select2-choices {
+        -moz-border-radius: 4px;
+        -webkit-border-radius: 4px;
+        border-radius: 4px;
+    }
+
+    .myclass {
+        width: 600px;
+    }
+
+    .popover {
+        width: 368px;
+        z-index: 1000000;
+    }
+
+    .mytitle {
+        font-size: 25px;
+        background-color: #f00;
+    }
+
+    .popoverClose {
+        float: right;
+        text-decoration: none;
+    }
+
+    .followupContainer {
+        padding: 10px;
+    }
+
+    .dl-horizontal dt {
+        padding-bottom: 10px;
+    }
+
+    .dl-horizontal dd {
+        padding-bottom: 10px;
+    }
+
+    .followup-title {
+        padding-bottom: 10px;
+    }
+
+    .followups ul {
+        margin-left: 0;
+    }
+
+        .followups ul li {
+            list-style: none;
+            border-bottom: 1px solid #F3EDED;
+        }
+
+    .commenter {
+        font-weight: bold;
+    }
+
+    .comment {
+        margin-left: 10px;
+        display: block;
+    }
+
+    .comment-date {
+        margin-left: 10px;
+    }
+
+    .modaltitle {
+        font-size: 20px;
+    }
+
+    .modaltitle-followups {
+        padding-left: 55%;
+    }
+
+    .followup-counter {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .comment-editor {
+        margin-left: 87%;
+        margin-top: 4px;
+    }
+
+        .comment-editor i {
+            margin-right: 5px;
+            cursor: pointer;
+            -moz-opacity: 0.4;
+            opacity: 0.4;
+        }
+
+            .comment-editor i:hover {
+                -moz-opacity: 1;
+                opacity: 1;
+            }
+
+    .ticker {
+        -moz-opacity: 0.5;
+        opacity: 0.5;
+    }
+
+    .notif-popover {
+        width: 300px;
+    }
+
+    .notifications {
+        margin: 0 0 10px 0;
+    }
+
+        .notifications li {
+            list-style: none;
+            cursor: pointer;
+            padding: 8px 0;
+        }
+
+            .notifications li:hover {
+                background-color: #E9E9E9;
+            }
+
+            .notifications li span {
+                text-decoration: none;
+                margin-left: 10px;
+                display: block;
+            }
+
+    .modal-header {
+        border-bottom: 0;
+    }
+    .notif-datetime {
+        
+    }

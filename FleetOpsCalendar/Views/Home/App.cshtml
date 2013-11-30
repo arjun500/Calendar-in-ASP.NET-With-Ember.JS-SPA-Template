@@ -1,0 +1,32 @@
+﻿@using MvcHtmlHelpers;
+
+
+@functions{
+    public string GetAntiForgeryToken()
+    {
+        string cookieToken, formToken;
+        AntiForgery.GetTokens(null, out cookieToken, out formToken);
+        return cookieToken + ":" + formToken;                
+    }
+}
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Styles.Render("~/Content/themes/base/css")
+
+    <input id="antiForgeryToken" type="hidden" value="@GetAntiForgeryToken()" />
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/ember")
+    @Scripts.Render("~/bundles/app")
+    @Scripts.Render("~/bundles/jqueryval")
+     @Scripts.Render("~/Contents/scripts")
+
+
+    @if (HttpContext.Current.IsDebuggingEnabled)
+    {
+        @Html.RenderEmber()
+    }
+    else
+    {
+        @Scripts.Render("~/bundles/templates")
+    }
