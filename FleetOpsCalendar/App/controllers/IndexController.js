@@ -3,7 +3,6 @@
     sortAscending: false,
     events: Ember.computed.alias('model'),
     getEventDetails: function (obj) {
-
         this.transitionToRoute('viewer', obj.eventId);
     }
 });

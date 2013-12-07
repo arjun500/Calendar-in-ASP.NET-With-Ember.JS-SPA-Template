@@ -5,60 +5,170 @@
   font-weight:bold;
   }
 </style>
-
-<div class="row">
-  <div class="well span3">
-    <a href="#" class="btn btn-default">
-      <i class="icon-pencil"></i>
-    </a>
-    <form class="form-horizontal">
-      <div class="control-group">
-        <label class="control-label" for="inputEmail">Event Type</label>
-        <div class="controls static-content">
-          <span>Debts Collection</span>
-        </div>
+{{#if isEditing}}
+<div class="well span3" style="margin-left:0">
+  <form class="form-horizontal">
+    <div class="control-group">
+      <label class="control-label" for="inputEmail">Event Type</label>
+      <div class="controls">
+        <select>
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
       </div>
-      <div class="control-group">
-        <label class="control-label" for="inputPassword">Event Title</label>
-        <div class="controls static-content">
-          <span>Account No:300120</span>
-        </div>
+    </div>
+    <div class="control-group">
+      <label class="control-label" for="inputPassword">Event Title</label>
+      <div class="controls">
+        {{input type="text" value=title size="50"}}
       </div>
+    </div>
 
-      <div class="control-group">
-        <label class="control-label" for="inputPassword">Description</label>
-        <div class="controls static-content">
-          <span>None</span>
-        </div>
+    <div class="control-group">
+      <label class="control-label" for="inputPassword">Description</label>
+      <div class="controls">
+        {{input type="text" value=isEditing size="50"}}
       </div>
+    </div>
 
-      <div class="control-group">
-        <label class="control-label" for="inputPassword">Event Start Date</label>
-        <div class="controls static-content">
-          <span>12/12/2009</span>
-        </div>
+    <div class="control-group">
+      <label class="control-label" for="inputPassword">Event Start Date</label>
+      <div class="controls">
+        {{input type="text" value=isEditing size="50"}}
       </div>
+    </div>
 
-      <div class="control-group">
-        <label class="control-label" for="inputPassword">Event End Date</label>
-        <div class="controls static-content">
-          <span>12/12/1013</span>
-        </div>
-      </div>  
-      <div class="control-group">
-        <div class="controls">
-          <label class="checkbox"/>
-          <input type="checkbox"/> All day
-        </div>
+    <div class="control-group">
+      <label class="control-label" for="inputPassword">Event End Date</label>
+      <div class="controls">
+        {{input type="text" value=isEditing size="50"}}
       </div>
-    </form>
-  </div>
-  <div class="well span9">
+    </div>
+    <div class="control-group">
+      <div class="controls">
+        <label class="checkbox"/>
+        <input type="checkbox"/> All day
+      </div>
+    </div>
+    <div class="form-actions">
 
-    <h3>Event Title Goes here</h3>
+      <button id="btnAddrtoAdd" style="width: 60px" class="btn btn-primary">Save</button>
 
-    <div style="height:300px">&nbsp;</div>
+    </div>
+  </form>
+</div>
+{{else}}
+<div class="well span3" style="margin-left:0">
+  <button class="btn btn-default" {{action "edit"}}>
+    <i class="icon-pencil"></i>
+  </button>
+  <form class="form-horizontal">
+    <div class="control-group">
+      <label class="control-label" for="inputEmail">Event Type</label>
+      <div class="controls static-content">
+        <span>Debts Collection</span>
+      </div>
+    </div>
+    <div class="control-group">
+      <label class="control-label" for="inputPassword">Event Title</label>
+      <div class="controls static-content">
+        <span>{{title}}</span>
+      </div>
+    </div>
 
+    <div class="control-group">
+      <label class="control-label" for="inputPassword">Description</label>
+      <div class="controls static-content">
+        <span>None</span>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <label class="control-label" for="inputPassword">Event Start Date</label>
+      <div class="controls static-content">
+        <span>{{start}}</span>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <label class="control-label" for="inputPassword">Event End Date</label>
+      <div class="controls static-content">
+        <span>{{end}}</span>
+      </div>
+    </div>
+    <div class="control-group">
+      <div class="controls">
+        <label class="checkbox"/>
+        <input type="checkbox"/> All day
+      </div>
+    </div>
+  </form>
+</div>
+{{/if}}
+<div class="well span9">
+
+  <h3>{{title}}</h3>
+
+  <div style="margin-top:200px">
+
+    <hr style="margin-bottom: 0" />
+
+    <div class="followupContainer">
+      <div class="followup-title">
+      </div>
+      <div class="followups">
+        <ul>
+          <li id="fk84_74395">
+            <p>
+              <span class="text-info commenter">Muhammed Irshad</span>
+              <span class="muted comment-date">12/11/2013 04"35 am</span>
+            </p>
+            <p>
+              <span class="comment">Please remember to collect in time, thank you.</span>
+              <span class="comment-editor">
+                <i class="icon-trash"></i>
+                <i class="icon-pencil"></i>
+                <span class="ticker"></span>
+              </span>
+            </p>
+          </li>
+
+
+
+          <li id="fk84_74f395">
+            <p>
+              <span class="text-info commenter">Muhammed Irshad</span>
+              <span class="muted comment-date">12/11/2013 04"35 am</span>
+            </p>
+            <p>
+              <span class="comment">Please remember to collect in time, thank you.</span>
+            </p>
+          </li>
+
+
+
+          <li id="fk84_743cg95">
+            <p>
+              <span class="text-info commenter">Muhammed Irshad</span>
+              <span class="muted comment-date">12/11/2013 04"35 am</span>
+            </p>
+            <p>
+              <span class="comment">Please remember to collect in time, thank you.</span>
+            </p>
+          </li>
+
+        </ul>
+      </div>
+      <div class="followupForm">
+        <textarea placeholder="leave a Followup..." id="txtnewComment" class="input-block-level" rows="3"></textarea>
+        <button id="postfollowUp" style="float: right; width: 60px; margin-bottom: 10px" class="btn btn-info">
+          <i class="icon-ok icon-white"></i>
+        </button>
+      </div>
+    </div>
 
   </div>
 

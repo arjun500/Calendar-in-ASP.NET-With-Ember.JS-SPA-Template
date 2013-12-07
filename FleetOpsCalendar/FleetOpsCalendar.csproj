@@ -336,6 +336,7 @@
     <Content Include="Contents\fullcalendar\fullcalendar.print.css" />
     <Content Include="Contents\fullcalendar\gcal.js" />
     <Content Include="Contents\img\alpha.png" />
+    <Content Include="Contents\img\binding_light.png" />
     <Content Include="Contents\img\chosen-sprite.png" />
     <Content Include="Contents\img\glyphicons-halflings-white.png" />
     <Content Include="Contents\img\glyphicons-halflings.png" />
@@ -497,6 +498,10 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\json_serializer.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\moment-with-langs.js" />
+    <Content Include="Scripts\moment-with-langs.min.js" />
+    <Content Include="Scripts\moment.js" />
+    <Content Include="Scripts\moment.min.js" />
     <Content Include="Scripts\serializer.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>

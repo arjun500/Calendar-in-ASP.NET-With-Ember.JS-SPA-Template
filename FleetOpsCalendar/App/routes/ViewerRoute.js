@@ -3,12 +3,13 @@
     //    // Set the IndexController's `title`
     //    this.controllerFor('application').set('model', App.application.options);
     //}
-    model: function () {
-        
-        return this.store.find('eventList');
+    model: function (params) {
+        var event = this.store.getById("eventList", params.eventId);
+        return event._data;
     },
-    setupController: function (controller, model) {
-        this.controllerFor('Viewer');
-    },
+    //setupController: function (controller, model) {
+    //    controller.set("isEditing", false);
+ 
+    //},
 
 });

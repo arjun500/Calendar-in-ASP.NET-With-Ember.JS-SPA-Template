@@ -74,57 +74,57 @@
 </head>
 <body>
 
-        <div id="main">
-            <div class="navbar navbar-inverse navbar-fixed-top">
-                <div class="navbar-inner">
-                    <div class="container">
-                        <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <a class="brand" href="@Url.Action("Index", "Home")">Calendar</a>
-                        <div class="nav-collapse collapse">
-                            <ul class="nav">
-                                <li style="width: 180px"><a style="padding-right: 5px" href="#"><i class="icon-time icon-white"></i><span style="margin-left: 5px" id="time"></span></a></li>
-                            </ul>
-                           
-                            <ul class="nav pull-right">
-                                <li><a href="#"><span><strong>@HttpContext.Current.User.Identity.Name</strong></span></a></li>
-                                <li class="dropdown">
-                                    <a class="dropdown-toggle tooltip-toggle"
-                                        data-toggle="dropdown"
-                                        href="#" rel="tooltip" data-placement="bottom" data-original-title="Settings"><i style="padding-right: 0" class="icon-cog icon-white"></i>
-                                        <b class="caret"></b>
-                                    </a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="@Url.Action("Index", "Preferences")"><i class=" icon-align-justify"></i><span class="icon-space5">Preferences</span></a></li>
-                                        <li><a href="#"><i class="icon-eye-close"></i><span class="icon-space5">Privacy</span></a></li>
-                                        <li class="dropdown-submenu"><a tabindex="-1" href="#"><i class=" icon-globe"></i><span class="icon-space5">Languages</span></a>
-                                            <ul class="dropdown-menu">
-                                                <li><a href="#">Bahasa Melayu</a></li>
-                                                <li><a href="#">العربية</a></li>
-                                                <li><a href="#">English(US)</a></li>
-                                                <li><a href="#">简体中文</a></li>
-                                                <li><a href="#">ภาษาไทย</a></li>
-                                            </ul>
-                                        </li>
-                                        <li data-redirect="@Url.Action("Action", "Repository")" data-callback="@Url.Action("Logon", "Authentication")" id="SignOut"><a href="#"><i class=" icon-off"></i><span class="icon-space5">Logout</span></a></li>
-                                        <li class="divider"></li>
-                                        <li><a href="#"><i class="icon-exclamation-sign"></i><span class="icon-space5">Help</span></a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
+    <div id="main">
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="brand" href="@Url.Action("Index", "Home")">Calendar</a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav">
+                            <li style="width: 180px"><a style="padding-right: 5px" href="#"><i class="icon-time icon-white"></i><span style="margin-left: 5px" id="time"></span></a></li>
+                        </ul>
+
+                        <ul class="nav pull-right">
+                            <li><a href="#"><span><strong>@HttpContext.Current.User.Identity.Name</strong></span></a></li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle tooltip-toggle"
+                                    data-toggle="dropdown"
+                                    href="#" rel="tooltip" data-placement="bottom" data-original-title="Settings"><i style="padding-right: 0" class="icon-cog icon-white"></i>
+                                    <b class="caret"></b>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="@Url.Action("Index", "Preferences")"><i class=" icon-align-justify"></i><span class="icon-space5">Preferences</span></a></li>
+                                    <li><a href="#"><i class="icon-eye-close"></i><span class="icon-space5">Privacy</span></a></li>
+                                    <li class="dropdown-submenu"><a tabindex="-1" href="#"><i class=" icon-globe"></i><span class="icon-space5">Languages</span></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">Bahasa Melayu</a></li>
+                                            <li><a href="#">العربية</a></li>
+                                            <li><a href="#">English(US)</a></li>
+                                            <li><a href="#">简体中文</a></li>
+                                            <li><a href="#">ภาษาไทย</a></li>
+                                        </ul>
+                                    </li>
+                                    <li data-redirect="@Url.Action("Action", "Repository")" data-callback="@Url.Action("Logon", "Authentication")" id="SignOut"><a href="#"><i class=" icon-off"></i><span class="icon-space5">Logout</span></a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#"><i class="icon-exclamation-sign"></i><span class="icon-space5">Help</span></a></li>
+                                </ul>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
-            <div id="madin" class="container-fluid">
-                <!--/span-->
-                @RenderBody()
-            </div>
-            <a href="#" class="scrollup"><i class="icon-arrow-up"></i></a>
         </div>
+        <div id="madin" class="container-fluid">
+            <!--/span-->
+            @RenderBody()
+        </div>
+        <a href="#" class="scrollup"><i class="icon-arrow-up"></i></a>
+    </div>
     @RenderSection("JavaScript", false)
 
 </body>
