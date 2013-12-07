@@ -225,6 +225,8 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\Comment.cs" />
+    <Compile Include="Models\Event.cs" />
     <Compile Include="Models\TodoItemDto.cs" />
     <Compile Include="Models\TodoListDto.cs" />
     <Compile Include="Models\TodoList.cs" />
@@ -234,10 +236,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="%40JSense.js" />
-    <Content Include="App\controllers\ApplicationController.js" />
-    <Content Include="App\models\Application.js" />
-    <Content Include="App\routes\ApplicationRoute.js" />
-    <Content Include="App\views\ApplicationView.js" />
+    <Content Include="App\controllers\IndexController.js" />
+    <Content Include="App\controllers\ViewerController.js" />
+    <Content Include="App\models\events.js" />
+    <Content Include="App\routes\IndexRoute.js" />
+    <Content Include="App\routes\ViewerRoute.js" />
+    <Content Include="App\views\IndexView.js" />
+    <Content Include="App\views\ViewerView.js" />
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Contents\css\dashBoard.css" />
     <Content Include="Contents\css\font-awesome.css" />
@@ -341,6 +346,9 @@
     <Content Include="Contents\js\customScripts.js" />
     <Content Include="Contents\js\jquery-2.0.2.min.js" />
     <Content Include="Contents\js\jquery-ui-sliderAccess.js" />
+    <Content Include="Contents\js\jquery-ui-sliderAccess.min.js">
+      <DependentUpon>jquery-ui-sliderAccess.js</DependentUpon>
+    </Content>
     <Content Include="Contents\js\jquery-ui-timepicker-addon.js" />
     <Content Include="Contents\js\jquery.pnotify.min.js" />
     <Content Include="Contents\js\jqueryui-1.92.min.js" />
@@ -424,6 +432,9 @@
     <Content Include="Content\themes\base\minified\jquery.ui.tooltip.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="Markups\CalendarEvents.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Scripts\ember-1.1.2.debug.js" />
     <Content Include="Scripts\ember-1.1.2.js" />
     <Content Include="Scripts\ember-1.1.2.min.js" />
@@ -465,6 +476,10 @@
     <Content Include="Contents\FontAwesome\scss\_path.scss" />
     <Content Include="Contents\FontAwesome\scss\_variables.scss" />
     <Content Include="App\templates\_topnav.hbs" />
+    <Content Include="Contents\js\jquery-ui-sliderAccess.min.js.map">
+      <DependentUpon>jquery-ui-sliderAccess.js</DependentUpon>
+    </Content>
+    <Content Include="App\templates\viewer.hbs" />
     <None Include="Scripts\jquery-2.0.3.intellisense.js" />
     <Content Include="Scripts\handlebars-1.1.2.js" />
     <Content Include="Scripts\handlebars.runtime-1.1.2.js" />
@@ -573,9 +588,9 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
-          <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>False</AutoAssignPort>
+          <DevelopmentServerPort>61082</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost:51125/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>

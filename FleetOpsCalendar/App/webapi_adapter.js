@@ -79,19 +79,14 @@ var forEach = Ember.ArrayPolyfills.forEach;
     });
   ```
 */
-
 DS.WebAPIAdapter = DS.RESTAdapter.extend({
-    defaultSerializer: "DS/WebAPI", //Ember.Data 1.0 beta 1 way
-
     createRecord: function (store, type, record) {
         var data = {};
         data = store.serializerFor(type.typeKey).serialize(record, { includeId: false });
-
         var primaryKey = store.serializerFor(type.typeKey).primaryKey;
         if (primaryKey) {
             delete data[primaryKey];
         }
-
         return this.ajax(this.buildURL(type.typeKey), "POST", { data: data });
     },
 

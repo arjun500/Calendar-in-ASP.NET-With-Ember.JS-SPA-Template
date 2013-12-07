@@ -9,22 +9,32 @@ using System.Net.Http;
 using System.Web.Http;
 using FleetOpsCalendar.Filters;
 using FleetOpsCalendar.Models;
+using System.Xml.Linq;
 
 namespace FleetOpsCalendar.Controllers
 {
     [Authorize]
-    public class TodoListController : ApiController
+    public class EventListController : ApiController
     {
         private TodoItemContext db = new TodoItemContext();
 
         // GET api/TodoList
-        public IEnumerable<TodoListDto> GetTodoLists()
+        public object GetEvents()
         {
-            return db.TodoLists.Include("Todos")
-                .Where(u => u.UserId == User.Identity.Name)
-                .OrderByDescending(u => u.TodoListId)
-                .AsEnumerable()
-                .Select(todoList => new TodoListDto(todoList));
+            var query = XElement.Load(System.Web.HttpContext.Current.Server.MapPath("~/Markups/CalendarEvents.xml"))
+                     .Elements("event")
+                             .Select(p => new Event
+                             {
+                                 eventId = p.Element("id").Value,
+                                 title = p.Element("title").Value,
+                                 start = p.Element("start").Value,
+                                 end = p.Element("end").Value,
+                                 allDay = (bool)p.Element("allDay")
+                             }).ToList();
+            var result = new { EventList = query };
+            return result;
+            //return query;
+
         }
 
         // GET api/TodoList/5

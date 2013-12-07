@@ -75,8 +75,8 @@ namespace FleetOpsCalendar
                 "~/Contents/css/Skins/Skyline/css/Compact/bootstrap.css",
                 "~/Contents/css/dashBoard.css",
              "~/Contents/css/bootstrap-responsive.css",
-                "~/Contents/fullcalendar/fullcalendar.css",
-                "~/Contents/fullcalendar/fullcalendar.print.css"
+             "~/Contents/fullcalendar/fullcalendar.print.css",
+             "~/Contents/fullcalendar/fullcalendar.css"
             ));
 
             bundles.Add(new StyleBundle("~/Content/themes/base/css").Include(
@@ -97,13 +97,13 @@ namespace FleetOpsCalendar
             bundles.Add(new ScriptBundle("~/Contents/scripts")
                 .Include("~/Contents/js/jquery-2.0.2.min.js"
                 , "~/Contents/js/jqueryui-1.92.min.js"
-                ,"~/Contents/js/bootstrap.min.js"
-                ,"~/Contents/js/customScripts.js"
-                ,"~/Contents/js/pageFuncv1x5.js"
-                ,"~/Contents/js/select2.min.js"
-                ,"~/Contents/js/jquery.pnotify.min.js"
-                ,"~/Contents/js/jQuery.tmpl.min.js"
-                ,"~/Contents/fullcalendar/fullcalendar.js"
+                , "~/Contents/js/bootstrap.min.js"
+                , "~/Contents/js/customScripts.js"
+                , "~/Contents/js/pageFuncv1x5.js"
+                , "~/Contents/js/select2.min.js"
+                , "~/Contents/js/jquery.pnotify.min.js"
+                , "~/Contents/js/jQuery.tmpl.min.js"
+                , "~/Contents/fullcalendar/fullcalendar.js"
                 ));
 
             bundles.Add(new ScriptBundle("~/Scripts/UnbotrusiveScripts").Include("~/Scripts/jquery.unobtrusive-ajax.min.js").Include("~/Scripts/jquery.validate.min.js").Include("~/Scripts/jquery.validate.unobtrusive.min.js"));
