@@ -5,7 +5,7 @@
     //}
     model: function (params) {
         var event = this.store.getById("eventList", params.eventId);
-        return event._data;
+        return event;
     },
     //setupController: function (controller, model) {
     //    controller.set("isEditing", false);

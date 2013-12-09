@@ -218,7 +218,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\HtmlHelperExtensions.cs" />
     <Compile Include="Controllers\TodoController.cs" />
-    <Compile Include="Controllers\TodoListController.cs" />
+    <Compile Include="Controllers\EventsController.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Filters\ValidateHttpAntiForgeryTokenAttribute.cs" />
     <Compile Include="Global.asax.cs">
@@ -476,11 +476,15 @@
     <Content Include="Contents\FontAwesome\scss\_mixins.scss" />
     <Content Include="Contents\FontAwesome\scss\_path.scss" />
     <Content Include="Contents\FontAwesome\scss\_variables.scss" />
-    <Content Include="App\templates\_topnav.hbs" />
+    <Content Include="App\templates\_topnav.hbs">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Contents\js\jquery-ui-sliderAccess.min.js.map">
       <DependentUpon>jquery-ui-sliderAccess.js</DependentUpon>
     </Content>
-    <Content Include="App\templates\viewer.hbs" />
+    <Content Include="App\templates\viewer.hbs">
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="Scripts\jquery-2.0.3.intellisense.js" />
     <Content Include="Scripts\handlebars-1.1.2.js" />
     <Content Include="Scripts\handlebars.runtime-1.1.2.js" />

@@ -6,17 +6,21 @@
   }
 </style>
 {{#if isEditing}}
-<div class="well span3" style="margin-left:0">
+<div class="well span3" style="margin-left:0;height:900px">
+  
+  <div class="page-header">
+  <h3>Event Details</h3>
+</div>
   <form class="form-horizontal">
     <div class="control-group">
       <label class="control-label" for="inputEmail">Event Type</label>
       <div class="controls">
-        <select>
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
+        <select class="span11">
+          <option>Debts Collection</option>
+          <option>After party</option>
+          <option>Lunch</option>
+          <option>CV Sales meeting</option>
+          <option>Other</option>
         </select>
       </div>
     </div>
@@ -30,21 +34,21 @@
     <div class="control-group">
       <label class="control-label" for="inputPassword">Description</label>
       <div class="controls">
-        {{input type="text" value=isEditing size="50"}}
+        {{textarea value=isEditing size="50" rows="3"}}
       </div>
     </div>
 
     <div class="control-group">
       <label class="control-label" for="inputPassword">Event Start Date</label>
       <div class="controls">
-        {{input type="text" value=isEditing size="50"}}
+        {{input type="text" value=start size="50"}}
       </div>
     </div>
 
     <div class="control-group">
       <label class="control-label" for="inputPassword">Event End Date</label>
       <div class="controls">
-        {{input type="text" value=isEditing size="50"}}
+        {{input type="text" value=end size="50"}}
       </div>
     </div>
     <div class="control-group">
@@ -53,15 +57,22 @@
         <input type="checkbox"/> All day
       </div>
     </div>
-    <div class="form-actions">
-
-      <button id="btnAddrtoAdd" style="width: 60px" class="btn btn-primary">Save</button>
+    <div class="form-actions" style="margin-top:300px;">
+      <button class="btn btn-default" {{action "Cancel"}}>
+        Cancel
+      </button>
+      <button style="width: 60px" {{action "updateRecord"}} class="btn btn-primary">Save</button>
 
     </div>
   </form>
 </div>
 {{else}}
-<div class="well span3" style="margin-left:0">
+<div class="well span3" style="margin-left:0;height:900px">
+  
+      <div class="page-header">
+  <h3>Event Details</h3>
+</div>
+  
   <button class="btn btn-default" {{action "edit"}}>
     <i class="icon-pencil"></i>
   </button>
@@ -108,13 +119,11 @@
   </form>
 </div>
 {{/if}}
-<div class="well span9">
+<div class="span9">
 
   <h3>{{title}}</h3>
 
-  <div style="margin-top:200px">
-
-    <hr style="margin-bottom: 0" />
+  <div style="margin-top:400px">
 
     <div class="followupContainer">
       <div class="followup-title">
@@ -163,9 +172,10 @@
         </ul>
       </div>
       <div class="followupForm">
-        <textarea placeholder="leave a Followup..." id="txtnewComment" class="input-block-level" rows="3"></textarea>
-        <button id="postfollowUp" style="float: right; width: 60px; margin-bottom: 10px" class="btn btn-info">
-          <i class="icon-ok icon-white"></i>
+        <textarea placeholder="leave a Followup..." id="txtnewComment" class="span7" rows="6"></textarea>
+        <br/>
+        <button id="postfollowUp" style="margin-bottom: 10pxposition: absolute;right: 615px;" class="btn btn-primary">
+          Submit
         </button>
       </div>
     </div>

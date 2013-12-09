@@ -242,7 +242,7 @@ body {
     font-size: 12px;
     line-height: 20px;
     color: #000;
-    background-image: url(../../../../../img/binding_light.png);
+    /*background-image: url(../../../../../img/binding_light.png);*/
 }
 
 a {

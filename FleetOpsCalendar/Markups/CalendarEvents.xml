@@ -1,14 +1,12 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Events>
   <event>
     <id>001</id>
     <title> Long Event </title>
     <start>2013-12-17T18:49:45Z</start>
-    <end>2013-12-17T18:49:45Z</end>
+    <end>2013-12-17T18:52:45Z</end>
     <allDay>false</allDay>
   </event>
-
-
   <event>
     <id>002</id>
     <title> All Day Event </title>
@@ -16,8 +14,6 @@
     <end>2013-12-18T18:49:45Z</end>
     <allDay>true</allDay>
   </event>
-
-
   <event>
     <id>996</id>
     <title> Repeating Event </title>
@@ -25,23 +21,20 @@
     <end>2013-12-17T11:49:45Z</end>
     <allDay>false</allDay>
   </event>
-
   <event>
     <id>993</id>
     <title> Repeating Event </title>
-    <start>2013-12-19T12:49:45Z</start>                                                     
+    <start>2013-12-19T12:49:45Z</start>
     <end>2013-12-19T13:49:45Z</end>
     <allDay>false</allDay>
   </event>
-
   <event>
     <id>994</id>
-    <title> Meeting </title>
+    <title>Long meeting</title>
     <start>2013-12-20T18:49:45Z</start>
-    <end>2013-12-20T18:49:45Z</end>
+    <end>2013-12-20T18:50:45Z</end>
     <allDay>false</allDay>
   </event>
-
   <event>
     <id>992</id>
     <title> Lunch </title>
@@ -49,7 +42,4 @@
     <end>2013-12-20T19:17:45Z</end>
     <allDay>false</allDay>
   </event>
-
-
-
 </Events>

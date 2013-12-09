@@ -56,33 +56,22 @@ namespace FleetOpsCalendar.Controllers
         }
 
         // PUT api/TodoList/5
-        [ValidateHttpAntiForgeryToken]
-        public HttpResponseMessage PutTodoList(int id, TodoListDto todoListDto)
+      
+        public HttpResponseMessage PutEvents(int id,Event _Event)
         {
-            if (!ModelState.IsValid)
-            {
-                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
-            }
-
-            if (id != todoListDto.TodoListId)
-            {
-                return Request.CreateResponse(HttpStatusCode.BadRequest);
-            }
-
-            TodoList todoList = todoListDto.ToEntity();
-            if (db.Entry(todoList).Entity.UserId != User.Identity.Name)
-            {
-                // Trying to modify a record that does not belong to the user
-                return Request.CreateResponse(HttpStatusCode.Unauthorized);
-            }
-
-            db.Entry(todoList).State = EntityState.Modified;
-
             try
             {
-                db.SaveChanges();
+                var XDoc = XDocument.Load(System.Web.HttpContext.Current.Server.MapPath("~/Markups/CalendarEvents.xml"));
+                var query = XDoc.Descendants("Events").Elements("event")
+                            .Where(p => p.Element("id").Value==id.ToString()).FirstOrDefault();
+
+                if (query!=null) {
+                    query.Element("title").Value = _Event.title;
+                }
+                XDoc.Save(System.Web.HttpContext.Current.Server.MapPath("~/Markups/CalendarEvents.xml"));
+
             }
-            catch (DbUpdateConcurrencyException)
+            catch (Exception)
             {
                 return Request.CreateResponse(HttpStatusCode.InternalServerError);
             }
