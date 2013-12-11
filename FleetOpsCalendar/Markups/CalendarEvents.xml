@@ -2,44 +2,56 @@
 <Events>
   <event>
     <id>001</id>
+    <eventType>Debts Collection</eventType>
     <title> Long Event </title>
     <start>2013-12-17T18:49:45Z</start>
     <end>2013-12-17T18:52:45Z</end>
     <allDay>false</allDay>
+    <desc>Description here</desc>
   </event>
   <event>
     <id>002</id>
+    <eventType>Debts Collection</eventType>
     <title> All Day Event </title>
     <start>2013-12-18T18:49:45Z</start>
     <end>2013-12-18T18:49:45Z</end>
     <allDay>true</allDay>
+    <desc>Description here</desc>
   </event>
   <event>
     <id>996</id>
+    <eventType>Debts Collection</eventType>
     <title> Repeating Event </title>
     <start>2013-12-17T10:49:45Z</start>
     <end>2013-12-17T11:49:45Z</end>
     <allDay>false</allDay>
+    <desc>Description here</desc>
   </event>
   <event>
     <id>993</id>
+    <eventType>Debts Collection</eventType>
     <title> Repeating Event </title>
     <start>2013-12-19T12:49:45Z</start>
     <end>2013-12-19T13:49:45Z</end>
     <allDay>false</allDay>
+    <desc>Description here</desc>
   </event>
   <event>
     <id>994</id>
+    <eventType>Debts Collection</eventType>
     <title>Long meeting</title>
-    <start>2013-12-20T18:49:45Z</start>
-    <end>2013-12-20T18:50:45Z</end>
-    <allDay>false</allDay>
+    <start>Fri Dec 20 2013 18:49:45 GMT+0800 (Malay Peninsula Standard Time)</start>
+    <end>Fri Dec 20 2013 18:50:45 GMT+0800 (Malay Peninsula Standard Time)</end>
+    <allDay>False</allDay>
+    <desc>xmen</desc>
   </event>
   <event>
     <id>992</id>
+    <eventType>Debts Collection</eventType>
     <title> Lunch </title>
     <start>2013-12-19T15:49:45Z</start>
     <end>2013-12-20T19:17:45Z</end>
     <allDay>false</allDay>
+    <desc>Description here</desc>
   </event>
 </Events>

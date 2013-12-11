@@ -34,21 +34,21 @@
     <div class="control-group">
       <label class="control-label" for="inputPassword">Description</label>
       <div class="controls">
-        {{textarea value=isEditing size="50" rows="3"}}
+        {{textarea value=desc size="500" rows="4"}}
       </div>
     </div>
 
     <div class="control-group">
       <label class="control-label" for="inputPassword">Event Start Date</label>
       <div class="controls">
-        {{input type="text" value=start size="50"}}
+        {{input type="text" data-type="datepicker" value=start size="50"}}
       </div>
     </div>
 
     <div class="control-group">
       <label class="control-label" for="inputPassword">Event End Date</label>
       <div class="controls">
-        {{input type="text" value=end size="50"}}
+        {{input type="text" data-type="datepicker" value=end size="50"}}
       </div>
     </div>
     <div class="control-group">
@@ -93,7 +93,7 @@
     <div class="control-group">
       <label class="control-label" for="inputPassword">Description</label>
       <div class="controls static-content">
-        <span>None</span>
+        <span>{{desc}}</span>
       </div>
     </div>
 
@@ -123,8 +123,12 @@
 
   <h3>{{title}}</h3>
 
-  <div style="margin-top:400px">
-
+  <div style="margin-top:300px">
+    <div class="page-header">
+      <h3>
+        Followups
+      </h3>
+    </div>
     <div class="followupContainer">
       <div class="followup-title">
       </div>

@@ -73,6 +73,7 @@ namespace FleetOpsCalendar
 
             bundles.Add(new Bundle("~/Content/css", new CssMinify()).Include(
                 "~/Contents/css/Skins/Skyline/css/Compact/bootstrap.css",
+                 "~/Contents/css/Skins/Skyline/css/Compact/bootstrap-datetimepicker.min.css",
                 "~/Contents/css/dashBoard.css",
              "~/Contents/css/bootstrap-responsive.css",
              "~/Contents/fullcalendar/fullcalendar.print.css",
@@ -103,6 +104,7 @@ namespace FleetOpsCalendar
                 , "~/Contents/js/select2.min.js"
                 , "~/Contents/js/jquery.pnotify.min.js"
                 , "~/Contents/js/jQuery.tmpl.min.js"
+                , "~/Contents/js/bootstrap-datetimepicker.min.js"
                 , "~/Contents/fullcalendar/fullcalendar.js"
                 ));
 

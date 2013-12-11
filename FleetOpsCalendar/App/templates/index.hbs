@@ -1,3 +1,76 @@
 ﻿{{partial topnav}}
 <br />
 <div id="calendar"></div>
+<div id="quickEventModal" aria-hidden="true" aria-labelledby="myModalLabel" class="modal hide" role="dialog" tabindex="-1">
+    <div class="modal-header">
+        <button aria-hidden="true" class="close" data-dismiss="modal" type="button">
+            X
+        </button>
+        <h3 id="myModalLabel">Add/Edit Events</h3>
+    </div>
+    <div class="clearfix">
+    </div>
+    <div class="modal-body form-horizontal">
+        <div class="control-group">
+            <label class="control-label">
+            Event Title</label>
+            <div class="controls">
+                <input id="txtEventName" type="text" />
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label">
+            Description</label>
+            <div class="controls">
+                <textarea id="txtDesc" cols="20" name="S1" rows="1"></textarea>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label">
+            From</label>
+            <div class="controls">
+                <input id="txtFromDate" type="text" />
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label">
+            To</label>
+            <div class="controls">
+                <input id="txtToDate" type="text" />
+            </div>
+        </div>
+        <div class="control-group">
+            <div class="controls">
+                <label class="checkbox">
+                <input id="chkRepeats" type="checkbox" /> Repeating Event
+                </label>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label">
+            Notify</label>
+            <div class="controls">
+                <label class="radio">
+                <input id="notifyopt1" checked="true" name="notify1" type="radio" value="V1" /> No One
+                <input id="notifyopt2" checked="true" name="notify2" type="radio" value="V1" /> Specific People
+                <input id="notifyopt3" checked="true" name="notify" type="radio" value="V1" /> Everyone
+                </label>
+            </div>
+        </div>
+        <div id="divSpecific" class="control-group">
+            <label class="control-label">
+            Specify People</label>
+            <div class="controls">
+                <input id="txtPeople" class="span3" type="text" />
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button id="btnCreateEvent" class="btn btn-primary">
+            <i class="icon-ok icon-white"></i>&nbsp;Create
+        </button>
+    </div>
+</div>
+<p>
+    &nbsp;</p>
+

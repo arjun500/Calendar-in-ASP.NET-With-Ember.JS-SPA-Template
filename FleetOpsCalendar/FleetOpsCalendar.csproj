@@ -237,11 +237,14 @@
   <ItemGroup>
     <Content Include="%40JSense.js" />
     <Content Include="App\controllers\IndexController.js" />
+    <Content Include="App\controllers\NewController.js" />
     <Content Include="App\controllers\ViewerController.js" />
     <Content Include="App\models\events.js" />
     <Content Include="App\routes\IndexRoute.js" />
+    <Content Include="App\routes\NewRoute.js" />
     <Content Include="App\routes\ViewerRoute.js" />
     <Content Include="App\views\IndexView.js" />
+    <Content Include="App\views\NewView.js" />
     <Content Include="App\views\ViewerView.js" />
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Contents\css\dashBoard.css" />
@@ -268,9 +271,11 @@
     <Content Include="Contents\css\jquery-ui-timepicker-addon.css" />
     <Content Include="Contents\css\jquery-ui.css" />
     <Content Include="Contents\css\select2.css" />
+    <Content Include="Contents\css\Skins\Skyline\css\Compact\bootstrap-datetimepicker.min.css" />
     <Content Include="Contents\css\Skins\Skyline\css\Compact\bootstrap-modal.css" />
     <Content Include="Contents\css\Skins\Skyline\css\Compact\bootstrap.css" />
     <Content Include="Contents\css\Skins\Skyline\css\Compact\BootsWatch.css" />
+    <Content Include="Contents\css\Skins\Skyline\css\Compact\datepicker.css" />
     <Content Include="Contents\css\Skins\Skyline\css\Compact\images\animated-overlay.gif" />
     <Content Include="Contents\css\Skins\Skyline\css\Compact\images\back_disabled.png" />
     <Content Include="Contents\css\Skins\Skyline\css\Compact\images\back_enabled.png" />
@@ -343,6 +348,8 @@
     <Content Include="Contents\img\hue.png" />
     <Content Include="Contents\img\saturation.png" />
     <Content Include="Contents\jquery.pnotify.default.css" />
+    <Content Include="Contents\js\bootstrap-datepicker.js" />
+    <Content Include="Contents\js\bootstrap-datetimepicker.min.js" />
     <Content Include="Contents\js\bootstrap.min.js" />
     <Content Include="Contents\js\customScripts.js" />
     <Content Include="Contents\js\jquery-2.0.2.min.js" />
@@ -485,6 +492,10 @@
     <Content Include="App\templates\viewer.hbs">
       <SubType>Designer</SubType>
     </Content>
+    <None Include="App\templates\New.hbs">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="App\templates\Datepicker.hbs" />
     <None Include="Scripts\jquery-2.0.3.intellisense.js" />
     <Content Include="Scripts\handlebars-1.1.2.js" />
     <Content Include="Scripts\handlebars.runtime-1.1.2.js" />
@@ -500,6 +511,8 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <None Include="Scripts\JSLINQ-vsdoc.js" />
+    <Content Include="Scripts\JSLINQ.js" />
     <Content Include="Scripts\json_serializer.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\moment-with-langs.js" />
@@ -536,7 +549,7 @@
     <Content Include="App\templates\index.hbs">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="App\templates\todoList.hbs" />
+    <None Include="App\templates\todoList.hbss" />
     <Content Include="App\views\TodoItemEditView.js" />
     <Content Include="App\views\TodoItemView.js" />
     <Content Include="App\views\TodoListEditView.js" />

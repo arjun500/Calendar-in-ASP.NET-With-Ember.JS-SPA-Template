@@ -1,0 +1,82 @@
+﻿
+<style type="text/css">
+  .control-group .static-content{
+  margin-top:5px;
+  font-weight:bold;
+  }
+</style>
+<div class="well span3" style="margin-left:0;height:900px">
+  
+  <div class="page-header">
+  <h3>Event Details</h3>
+</div>
+  <form class="form-horizontal">
+    <div class="control-group">
+      <label class="control-label" for="inputEmail">Event Type</label>
+      <div class="controls">
+        <select class="span11">
+          <option>Debts Collection</option>
+          <option>After party</option>
+          <option>Lunch</option>
+          <option>CV Sales meeting</option>
+          <option>Other</option>
+        </select>
+      </div>
+    </div>
+    <div class="control-group">
+      <label class="control-label" for="inputPassword">Event Title</label>
+      <div class="controls">
+        {{input type="text" value=title size="50"}}
+      </div>
+    </div>
+
+    <div class="control-group">
+      <label class="control-label" for="inputPassword">Description</label>
+      <div class="controls">
+        {{textarea value=desc size="500" rows="4"}}
+      </div>
+    </div>
+
+    <div class="control-group">
+      <label class="control-label" for="inputPassword">Event Start Date</label>
+      <div class="controls">
+        {{view App.DatePickerField  valueBinding='start'}}
+   
+      </div>
+    </div>
+
+    <div class="control-group">
+      <label class="control-label" for="inputPassword">Event End Date</label>
+      <div class="controls">
+        {{view App.DatePickerField  valueBinding='controller.end_date'}}
+      
+      </div>
+    </div>
+
+    <div class="control-group">
+      <div class="controls">
+        <label class="checkbox"/>
+        <input type="checkbox"/> All day
+      </div>
+    </div>
+    <div class="form-actions" style="margin-top:300px;">
+      <button class="btn btn-default" {{action "CancelCreate"}}>
+        Cancel
+      </button>
+      <button style="width: 60px" {{action "newRecord"}} class="btn btn-primary">Save</button>
+
+    </div>
+  </form>
+</div>
+<div class="span9">
+
+  <h3>{{title}}</h3>
+  <p>{{desc}}</p>
+
+  <div style="margin-top:400px">
+
+
+  </div>
+
+</div>
+

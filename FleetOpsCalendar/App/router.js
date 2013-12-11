@@ -1,6 +1,7 @@
 ﻿App.Router.map(function () {
     this.resource("calendar", function () {
         this.resource("viewer", { path: '/viewer/:eventId' });
+        this.resource("new", { path: '/new' });
     });
     
     //this.route("about");

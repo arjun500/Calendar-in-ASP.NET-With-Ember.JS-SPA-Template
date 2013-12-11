@@ -4,3 +4,6 @@ App.ApplicationAdapter = DS.WebAPIAdapter.extend({
     antiForgeryTokenSelector: "#antiForgeryToken",
     LOG_TRANSITIONS: true
 });
+Ember.TextField.reopen({
+    attributeBindings: ['data-type']
+});

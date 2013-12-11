@@ -29,7 +29,9 @@ namespace FleetOpsCalendar.Controllers
                                  title = p.Element("title").Value,
                                  start = p.Element("start").Value,
                                  end = p.Element("end").Value,
-                                 allDay = (bool)p.Element("allDay")
+                                 allDay = (bool)p.Element("allDay"),
+                                 desc = p.Element("desc").Value,
+                                 eventType = p.Element("eventType").Value
                              }).ToList();
             var result = new { EventList = query };
             return result;
@@ -67,16 +69,21 @@ namespace FleetOpsCalendar.Controllers
 
                 if (query!=null) {
                     query.Element("title").Value = _Event.title;
+                    query.Element("start").Value = _Event.start;
+                    query.Element("end").Value = _Event.end;
+                    query.Element("allDay").Value = _Event.allDay.ToString();
+                    query.Element("desc").Value = _Event.desc;
+                    query.Element("eventType").Value = _Event.eventType;
                 }
                 XDoc.Save(System.Web.HttpContext.Current.Server.MapPath("~/Markups/CalendarEvents.xml"));
-
+                _Event.eventId = id.ToString();
             }
             catch (Exception)
             {
                 return Request.CreateResponse(HttpStatusCode.InternalServerError);
             }
 
-            return Request.CreateResponse(HttpStatusCode.NoContent);
+            return Request.CreateResponse(HttpStatusCode.OK,_Event);
         }
 
         // POST api/TodoList

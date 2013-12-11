@@ -3,7 +3,9 @@
     title: DS.attr('string'),
     start: DS.attr('string'),
     end: DS.attr('string'),
-    allDay: DS.attr('string')
+    allDay: DS.attr('string'),
+    desc: DS.attr('string'),
+    eventType:DS.attr('string')
 });
 
 App.EventListSerializer = DS.WebAPISerializer.extend({

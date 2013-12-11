@@ -22,7 +22,7 @@ App.IndexView = Ember.View.extend({
             selectable: true,
             selectHelper: true,
             select: function (start, end, allDay) {
-                alert('event click');
+                $('#quickEventModal').modal('show');
                 //TODO findout how to get values from the html elements
             },
             editable: true,

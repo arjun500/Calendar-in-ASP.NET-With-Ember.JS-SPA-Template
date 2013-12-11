@@ -13,5 +13,7 @@ namespace FleetOpsCalendar.Models
         public string end { get; set; }
         public bool allDay { get; set; }
         public string className { get; set; }
+        public string desc { get; set; }
+        public string eventType { get; set; }
     }
 }
