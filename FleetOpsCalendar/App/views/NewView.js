@@ -12,7 +12,9 @@ App.DatePickerField = Ember.View.extend({
         OnChangeDate = function (evt) {
             return self.set('value', evt.date.toString());
         };
-        return $('.date').datetimepicker({
+        console.log($('.date'));
+        console.log(this.$('.date'));
+        return $(this.$('.date')).datetimepicker({
             language: 'en',
         }).on('changeDate', OnChangeDate);
     }

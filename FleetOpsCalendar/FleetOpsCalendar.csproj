@@ -360,6 +360,7 @@
     <Content Include="Contents\js\jquery-ui-timepicker-addon.js" />
     <Content Include="Contents\js\jquery.pnotify.min.js" />
     <Content Include="Contents\js\jqueryui-1.92.min.js" />
+    <Content Include="Contents\js\pageFuncv1x5.js" />
     <Content Include="Contents\js\select2.min.js" />
     <Content Include="Contents\js\starter-kit-1.2.0\css\normalize.css" />
     <Content Include="Contents\js\starter-kit-1.2.0\css\style.css" />

@@ -15,7 +15,7 @@
             var obj = {
                 title: this.get('title'),
                 start: this.get('start'),
-                end: this.get('end_date'),
+                end: this.get('end'),
                 eventType: "xx",
                 desc: this.get('desc')
             };
@@ -23,7 +23,6 @@
             eventList.save().then(function () {
                 alert('event saved');
             });
-
         },
         updateRecord: function () {
             console.log(this);
