@@ -5,8 +5,18 @@
     end: DS.attr('string'),
     allDay: DS.attr('string'),
     desc: DS.attr('string'),
-    eventType:DS.attr('string')
+    eventType: DS.attr('string')
 });
+App.Status = [
+{text: "Active", value: "A"},
+{text: "Closed", value: "C"},
+{text: "Inactive", value: "I"}
+];
+App.EventTypes = [
+{ text: "Debts Collection", value: "D" },
+{ text: "Lunch", value: "L" },
+{ text: "CV Sales meeting", value: "C" }
+];
 
 App.EventListSerializer = DS.WebAPISerializer.extend({
     primaryKey: 'eventId'
@@ -23,7 +33,7 @@ App.EventListSerializer = DS.WebAPISerializer.extend({
     //    });
     //    var normalizedArray = payload.map(function (item, index, enumerable){
     //        hash.eventList.map(function (event) {
-               
+
     //        });
     //        return hash;
     //    }, this);

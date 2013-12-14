@@ -236,6 +236,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="%40JSense.js" />
+    <Content Include="App\controllers\ApplicationController.js" />
     <Content Include="App\controllers\IndexController.js" />
     <Content Include="App\controllers\NewController.js" />
     <Content Include="App\controllers\ViewerController.js" />
@@ -490,9 +491,9 @@
     <Content Include="Contents\js\jquery-ui-sliderAccess.min.js.map">
       <DependentUpon>jquery-ui-sliderAccess.js</DependentUpon>
     </Content>
-    <Content Include="App\templates\viewer.hbs">
+    <None Include="App\templates\viewer.hbs">
       <SubType>Designer</SubType>
-    </Content>
+    </None>
     <None Include="App\templates\New.hbs">
       <SubType>Designer</SubType>
     </None>

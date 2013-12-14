@@ -2,7 +2,12 @@
     // the initial value of the `search` property
     model: this.get('model'),
     end_date: new Date(),
-    //needs: ["Viewer"], //says we need the viewer route for this, not necessary to type in
+    selectedEventType: null,
+    selectedStatus:null,
+    needs: ["Index"],
+    valueChanged: function () {
+        alert('value changed');
+    }.observes('selectedEventType'),
     actions: {
         edit: function () {
             this.set('isEditing', true);
@@ -11,18 +16,24 @@
             this.set('isEditing', false);
         },
         newRecord: function () {
-
+            console.log(this.get('eventType'));
+            var self = this;
             var obj = {
                 title: this.get('title'),
                 start: this.get('start'),
                 end: this.get('end'),
-                eventType: "xx",
+                eventType: this.get('selectedEventType'),
                 desc: this.get('desc')
             };
-            var eventList = this.store.createRecord("eventList", obj);
-            eventList.save().then(function () {
-                alert('event saved');
-            });
+            //self.get('controllers.Index').eventCreated();
+            //var eventList = this.store.createRecord("eventList", obj);
+            //eventList.save().then(function (data) {
+            //    //todoList.set("eventId", data.get('id'));
+            //    $.pnotify({ text: "Event created successfully.", type: 'success', icon: false });
+            //    self.transitionToRoute("/");
+            //}, function () {
+            //    $.pnotify({ text: "Event creation failed.", type: 'error', icon: false });
+            //});
         },
         updateRecord: function () {
             console.log(this);

@@ -1,9 +1,9 @@
 ﻿
 <style type="text/css">
-  .control-group .static-content{
-  margin-top:5px;
-  font-weight:bold;
-  }
+    .control-group .static-content {
+        margin-top: 5px;
+        font-weight: bold;
+    }
 </style>
 {{#if isEditing}}
 <div class="well span3" style="margin-left:0;height:900px">
@@ -123,7 +123,37 @@
 
   <h3>{{title}}</h3>
 
-  <div style="margin-top:300px">
+    <style type="text/css">
+        .sharedWith .box {
+            height: 75px;
+            padding: 20px;
+            background-color: #2466be;
+        }
+
+            .sharedWith .box a {
+                color: #fff;
+                font-size: 13px;
+            }
+    </style>
+    <br />
+    <div class="row">
+        <h4>Shared With: </h4>
+  <div class="sharedWith">
+      <div class="span3 box">
+          <a href="#">Muhammed Ibrahim</a>
+      </div>
+      <div class="span3 box">
+          <a href="#">Hashim Aslam</a>
+      </div>
+            <div class="span3 box">
+          <a href="#">Abdul Raheem</a>
+      </div>
+      <div class="span3 box">
+          <a href="#">Naila K</a>
+      </div>
+  </div>
+  </div>
+  <div style="margin-top:200px">
     <div class="page-header">
       <h3>
         Followups

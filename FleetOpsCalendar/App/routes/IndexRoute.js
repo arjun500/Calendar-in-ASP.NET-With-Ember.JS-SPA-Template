@@ -3,6 +3,10 @@
     //    // Set the IndexController's `title`
     //    this.controllerFor('application').set('model', App.application.options);
     //}
+    activate: function () {
+        $(document).attr('title', 'FleetOps Calendar');
+    },
+
     model: function () {
         return this.store.findAll('eventList');
     },

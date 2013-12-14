@@ -20,7 +20,7 @@
             console.log(this);
             //var updated = this.store.update("eventList", this);
             var toupdate = this.get('content').save().then(function () {
-                alert('haa');
+                $.pnotify({ text: "Event updated.", type: 'success', icon: false });
             });
 
 

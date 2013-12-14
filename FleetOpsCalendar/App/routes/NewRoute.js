@@ -1,4 +1,9 @@
 ﻿App.NewRoute = Ember.Route.extend({
+
+    activate: function () {
+        $(document).attr('title', 'New Event');
+    },
+
     setupController: function (controller,model) {
         // Set the IndexController's `title`
         this.controllerFor('New').set('model', model);
