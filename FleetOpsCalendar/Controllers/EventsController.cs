@@ -85,26 +85,44 @@ namespace FleetOpsCalendar.Controllers
 
             return Request.CreateResponse(HttpStatusCode.OK,_Event);
         }
-
-        // POST api/TodoList
-        [ValidateHttpAntiForgeryToken]
-        public HttpResponseMessage PostTodoList(TodoListDto todoListDto)
+        [HttpPost]
+        public HttpResponseMessage PostEvents(Event EventList)
         {
-            if (!ModelState.IsValid)
-            {
-                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
-            }
-
-            todoListDto.UserId = User.Identity.Name;
-            TodoList todoList = todoListDto.ToEntity();
-            db.TodoLists.Add(todoList);
-            db.SaveChanges();
-            todoListDto.TodoListId = todoList.TodoListId;
-
-            HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.Created, todoListDto);
-            response.Headers.Location = new Uri(Url.Link("DefaultApi", new { id = todoListDto.TodoListId }));
+            var XDoc = XDocument.Load(System.Web.HttpContext.Current.Server.MapPath("~/Markups/CalendarEvents.xml"));
+            XElement Elm = new XElement("event", new XElement("id", "405"), new XElement("title", EventList.title),
+                new XElement("start", EventList.start), new XElement("end", EventList.end), new XElement("allDay", EventList.allDay),
+                new XElement("desc", EventList.desc), new XElement("eventType", EventList.eventType)
+                );
+            XDoc.Root.Add(Elm);
+            XDoc.Save(System.Web.HttpContext.Current.Server.MapPath("~/Markups/CalendarEvents.xml"));
+            EventList.eventId = "405";
+            HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.Created, EventList);
+            response.Headers.Location = new Uri(Url.Link("DefaultApi", new { id = EventList.eventId }));
             return response;
+
+
         }
+
+
+        //// POST api/TodoList
+        //[ValidateHttpAntiForgeryToken]
+        //public HttpResponseMessage PostTodoList(TodoListDto todoListDto)
+        //{
+        //    if (!ModelState.IsValid)
+        //    {
+        //        return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
+        //    }
+
+        //    todoListDto.UserId = User.Identity.Name;
+        //    TodoList todoList = todoListDto.ToEntity();
+        //    db.TodoLists.Add(todoList);
+        //    db.SaveChanges();
+        //    todoListDto.TodoListId = todoList.TodoListId;
+
+        //    HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.Created, todoListDto);
+        //    response.Headers.Location = new Uri(Url.Link("DefaultApi", new { id = todoListDto.TodoListId }));
+        //    return response;
+        //}
 
         // DELETE api/TodoList/5
         [ValidateHttpAntiForgeryToken]

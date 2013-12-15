@@ -1,28 +1,27 @@
-﻿
-<style type="text/css">
-  .control-group .static-content{
-  margin-top:5px;
-  font-weight:bold;
-  }
+﻿<style type="text/css">
+    .control-group .static-content {
+        margin-top: 5px;
+        font-weight: bold;
+    }
 </style>
 <div class="well span3" style="margin-left:0;height:900px">
-  
+
   <div class="page-header">
-  <h3>Event Details</h3>
-</div>
+    <h3>Event Details</h3>
+  </div>
   <form class="form-horizontal">
     <div class="control-group">
       <label class="control-label" for="inputEmail">Event Type</label>
       <div class="controls">
-        <select class="span11">
-          <option>Debts Collection</option>
-          <option>After party</option>
-          <option>Lunch</option>
-          <option>CV Sales meeting</option>
-          <option>Other</option>
-        </select>
+           {{view App.SelectViewType
+        contentBinding="App.EventTypes"
+                    class="span11"
+        optionValuePath="content.value"
+        optionLabelPath="content.text"
+        selectionBinding="controller.selectedEventType"
+          }}
+</div>
       </div>
-    </div>
     <div class="control-group">
       <label class="control-label" for="inputPassword">Event Title</label>
       <div class="controls">
@@ -41,7 +40,7 @@
       <label class="control-label" for="inputPassword">Event Start Date</label>
       <div class="controls">
         {{view App.DatePickerField  valueBinding='start'}}
-   
+
       </div>
     </div>
 
@@ -49,7 +48,7 @@
       <label class="control-label" for="inputPassword">Event End Date</label>
       <div class="controls">
         {{view App.DatePickerField  valueBinding='end'}}
-      
+
       </div>
     </div>
 
@@ -59,6 +58,19 @@
         <input type="checkbox"/> All day
       </div>
     </div>
+          <div class="control-group">
+      <label class="control-label" for="inputPassword">Status</label>
+      <div class="controls">
+           {{view App.Select2ViewStatus
+        contentBinding="App.Status"
+          class="span11"
+          selectionBinding="selectedStatus"
+        optionLabelPath="content.text"
+        optionValuePath="content.value"
+    }}
+</div>
+      </div>
+
     <div class="form-actions" style="margin-top:300px;">
       <button class="btn btn-default" {{action "CancelCreate"}}>
         Cancel
